@@ -1,26 +1,27 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
 import Home from './components/Home'
 import Contact from './components/Contact'
 import CocktailMenu from './components/CocktailMenu'
-import { Route, Switch, Link, Redirect } from 'react-router-dom';
+import { stack as BurgerMenu } from 'react-burger-menu'
+import { Route, Switch, Link } from 'react-router-dom'
 
 function App() {
+
+  const [menuOpenState, setMenuOpenState] = useState(false)
+
+  const hideMenu = () => {
+    setMenuOpenState(!menuOpenState);
+  };
+  console.log(menuOpenState)
+
   return (
     <div className="App">
-      <nav>
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/menu">Menu</Link>
-          </li>
-          <li>
-            <Link to="/contact-us">Contact</Link>
-          </li>
-        </ul>
+      <nav className="nav-bar">
+        <BurgerMenu right width={250} id="burger-menu">
+          <Link to="/">Home</Link>
+          <Link to="/menu">Menu</Link>
+          <Link to="/contact-us">Contact</Link>
+        </BurgerMenu>
       </nav>
 
       <Switch>
@@ -30,7 +31,7 @@ function App() {
       </Switch>
 
 
-    </div>
+    </div >
   );
 }
 

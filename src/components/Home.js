@@ -1,20 +1,22 @@
 import React, { useState, useEffect } from 'react';
 import Axios from 'axios';
+import Spotify from 'node-spotify-api';
 
 const Home = () => {
 
   const [song, setSong] = useState([]);
 
-  useEffect(() => {
+  const spotify = new Spotify({
+    id: 'ed8ef298820149d99b3308e2be8e13ba',
+    secret: '14549ff5603445fc94434aff32e73a24'
+  });
 
-    Axios
-      .get(`https://api.spotify.com/`)
-      .then(res => {
-        console.log(res.data)
-        setSong(res.data)
-      })
-
-  }, [])
+  spotify.search({ type: 'track', query: 'Bodak Yellow' }, function (err, data) {
+    if (err) {
+      return console.log('Error occurred: ' + err);
+    }
+    // console.log(data.tracks.items[0]);
+  });
 
   return (
     <div className="home">
@@ -23,7 +25,10 @@ const Home = () => {
         <h2>Sub-Header</h2>
         <button className="cta-btn">
           CALL TO ACTION!
-        </button>
+        </button><br />
+        <audio controls>
+          <source src="https://p.scdn.co/mp3-preview/cab6e91217590b37cc254585f3f951c5a5280375?cid=ed8ef298820149d99b3308e2be8e13ba" type="audio/mp3" />
+        </audio>
       </section>
       <section id="features">
         <ul>
