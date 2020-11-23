@@ -12,7 +12,7 @@ function App() {
       <nav>
         <ul>
           <li>
-            <Link t0="/">Home</Link>
+            <Link to="/">Home</Link>
           </li>
           <li>
             <Link to="/menu">Menu</Link>
@@ -24,11 +24,11 @@ function App() {
       </nav>
 
       <Switch>
-        <Route exact path="/" render={(props) => <Home {...props} /> } />
+        <Route exact path="/" render={(props) => <Home {...props} />} />
         <Route exact path="/menu" render={(props) => <CocktailMenu {...props} />} />
         <Route exact path="/contact-us" render={(props) => <Contact {...props} />} />
       </Switch>
-    
+
 
     </div>
   );
