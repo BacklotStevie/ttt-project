@@ -11,3 +11,21 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.home {
+  font-family: 'Helvetica Neue';
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+#drinks img {
+  width: 300px;
+}
