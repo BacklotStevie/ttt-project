@@ -12,10 +12,6 @@ code {
     monospace;
 }
 
-.home {
-  font-family: 'Helvetica Neue';
-}
-
 nav ul {
   display: flex;
   justify-content: space-evenly;
