@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
+import { Link } from 'react-router-dom'
 
 const Home = () => {
   return (
@@ -6,9 +7,11 @@ const Home = () => {
 
       <section id="headline">
         <h1>Toning with Teremana Tequila</h1>
-        <button className="cta-btn">
-          RESERVE YOUR SPOT!
-        </button><br />
+        <Link to="/submit">
+          <button className="cta-btn">
+            RESERVE YOUR SPOT!
+          </button>
+        </Link><br />
       </section>
 
       <section id="rock-pics">
@@ -29,9 +32,11 @@ const Home = () => {
           For a <b>limited time only,</b> The Rock is inviting <i>you</i> into his home for a Zumba session followed by a cold beverage made with his very own Teremana Tequila.<br /><br />
           <h3>GET YOUR SPOT NOW!</h3>
         </p>
-        <button className="cta-btn">
-          SERIOUSLY, HE NEEDS THE MONEY. PLEASE SIGN UP.
-        </button><br />
+        <Link to="/submit">
+          <button className="cta-btn">
+            SERIOUSLY, HE NEEDS THE MONEY. PLEASE.
+          </button>
+        </Link><br />
       </section>
 
       <section id="funny-rock-pic">
@@ -88,7 +93,11 @@ const Home = () => {
         <div id="cta-items">
           <div id="cta-details">
             <h2>ARE YOU READY TO TONE WITH TEREMANA TEQUILA?!</h2>
-            <button className="cta-btn">WE'RE DESPERATE</button>
+            <Link to="/submit">
+              <button className="cta-btn">
+                WE'RE DESPERATE
+              </button>
+            </Link>
             <p>Be a part of the greatest workout ever. Dance to great music. Drink lots of booze. Fantasize about The Rock. What could be better?</p>
           </div>
         </div>

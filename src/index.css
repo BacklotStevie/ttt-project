@@ -56,16 +56,6 @@ h2 {
   margin: 15px;
 }
 
-.cta-btn2 {
-  color: white;
-  font-size: 1rem;
-  padding: 15px;
-  border: none;
-  border-radius: 45px;
-  background-color: #F25925;
-  margin: 15px;
-}
-
 #fake-rock-quote {
   padding: 2em;
   background-color: #F4A990;
@@ -214,4 +204,59 @@ footer {
 footer img {
   width: 15%;
   height: auto;
+}
+
+/* //////////////////////////////////////////////////////////////////////////////// */
+/* SUBMIT INFO SECTION */
+/* //////////////////////////////////////////////////////////////////////////////// */
+
+#submit-header {
+  background-image: url('images/what-the-rock-is-cookin.jpg');
+  background-position: center 0%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 60vh;
+}
+
+#submit-header h1 {
+  font-family: 'Montserrat';
+  color: rgb(255, 255, 255);
+  font-size: 3rem;
+  margin: 0;
+  padding: 27vh 0 0 0;
+  text-shadow: 4px 4px 2px #F25925;
+}
+
+.submit h2 {
+  color: #F25925;
+}
+
+.form {
+  font-weight: bold;
+}
+
+.form input {
+  width: 75vw;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px;
+  background-color: #F4A990;
+}
+
+.form-button button {
+  color: white;
+  font-size: 1rem;
+  padding: 10px;
+  border: none;
+  border-radius: 45px;
+  background-color: #F25925;
+  margin: 15px;
+  width: 40%;
+}
+
+#separator {
+  background-color: #F4A990;
+  border: none;
+  height: 15vh;
 }
