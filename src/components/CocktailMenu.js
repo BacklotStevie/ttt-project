@@ -10,13 +10,13 @@ const CocktailMenu = () => {
     Axios
       .get(`https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=Tequila`)
       .then(res => {
-        // console.log(res.data)
+        console.log(res.data)
         setCocktails(res.data.drinks)
       })
 
   }, [])
 
-  console.log(cocktails)
+  // console.log(cocktails)
 
   const showCocktailDetails = () => {
     return cocktails.map(eachCocktail => {

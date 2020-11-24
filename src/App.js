@@ -27,18 +27,22 @@ function App() {
           onStateChange={(state) => handleStateChange(state)}
         >
           <Link onClick={hideMenu} to="/">Home</Link>
-          <Link onClick={hideMenu} to="/menu">Menu</Link>
+          <Link onClick={hideMenu} to="/drinks">Drinks</Link>
           <Link onClick={hideMenu} to="/contact-us">Contact</Link>
         </BurgerMenu>
       </nav>
 
       <Switch>
         <Route exact path="/" render={(props) => <Home {...props} />} />
-        <Route exact path="/menu" render={(props) => <CocktailMenu {...props} />} />
+        <Route exact path="/drinks" render={(props) => <CocktailMenu {...props} />} />
         <Route exact path="/contact-us" render={(props) => <Contact {...props} />} />
       </Switch>
 
-
+      <nav className="footer">
+        <Link to="/">Home</Link>
+        <Link to="/menu">Menu</Link>
+        <Link to="/contact-us">Contact</Link>
+      </nav>
     </div >
   );
 }

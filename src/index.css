@@ -1,17 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap');
+@import url('https://fonts.google.com/specimen/Montserrat?selection.family=Montserrat:ital,wght@0,400;0,700;1,400');
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Montserrat';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: 'Montserrat';
 }
 
 .nav-bar {
@@ -27,44 +24,183 @@ nav a {
   color: white;
   text-decoration: none;
   font-size: 1.5rem;
-  font-weight: bold;
+  /* font-weight: bold; */
 }
 
 .home {
-  background-image: url('../src/images/the-rock-background-mobile.png');
-  background-attachment: fixed;
-  background-position: 84%;
-  background-repeat: no-repeat;
-  background-size: cover;
+  
 }
 
 #headline {
-  height: 100vh;
+  background-image: url('images/rock-headline.jpg');
+  background-position: center 0%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 50vh;
 }
 
 #headline h1 {
-  font-family: 'Amatic SC';
-  font-size: 6rem;
+  font-family: 'Montserrat';
+  color: white;
+  font-size: 3.2rem;
   margin: 0;
-  padding: 65% 0 0 0;
-  text-shadow: 0px 0px 5px rgb(255, 190, 10);
+  padding: 15vh 0 0 0;
 }
 
 h2 {
-  font-size: 2.5rem;
-  font-weight: lighter;
-  margin: 0;
+  font-size: 1.5rem;
 }
 
 .cta-btn {
-  font-size: 1.3rem;
+  color: white;
+  font-size: 1rem;
   padding: 15px;
   border: none;
-  border-radius: 25px;
-  background-color: rgb(105, 231, 189);
+  border-radius: 45px;
+  background-color: #F25925;
   margin: 15px;
+}
+
+#fake-rock-quote {
+  padding: 2em;
+  background-color: #F4A990;
+  text-align: center;
+  margin-top: 7%;
+}
+
+#fake-rock-quote p {
+  margin: 0;
+}
+
+.rock-images img {
+  width: 90vw;
+  border-radius: 10px;
+  margin: 0 5vmin;
+}
+
+#funny-rock-pic {
+  background-image: url('images/funny-tequila-rock.jpg');
+  background-position: 0% 0%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 40vh;
+}
+
+#blanco-section {
+  background-color: #F25925;
+}
+
+#blanco-section img {
+  width: 20vw;
+  margin: 5%;
+}
+
+#blanco-items {
+  display: flex;
+  flex-direction: row;
+  margin: 0 5%;
+}
+
+#blanco-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 7%;
+}
+
+#blanco-details button {
+  font-size: 1rem;
+  border: none;
+  border-radius: 20px;
+  background-color: white;
+  width: 50%;
+  padding: 10px;
+}
+
+#repo-section {
+  background-color: #F4A990;
+}
+
+#repo-section img {
+  width: 20vw;
+  margin: 5%;
+}
+
+#repo-items {
+  display: flex;
+  flex-direction: row;
+  margin: 0 5%;
+}
+
+#repo-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 7%;
+}
+
+#repo-details button {
+  font-size: 1rem;
+  border: none;
+  border-radius: 20px;
+  background-color: white;
+  width: 50%;
+  padding: 10px;
+}
+
+#review-items h1 {
+  color: #F25925;
+}
+
+#reveiw-line-break {
+  width: 60%;
+  border: none;
+  border-radius: 3px;
+  background-color: #F4A990;
+  height: 3px;
+}
+
+#review-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 50vh;
+}
+
+#review-box img {
+  width: 50vw;
+}
+
+#cta-items img {
+  height: 300px;
+  border-radius: 15px;
+}
+
+#cta-items {
+  height: 1000px;
+  background-image: url('images/luau-rock.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#cta-details {
+  border-radius: 10px;
+  background-color: #f4a9909c;
+  width: 90%;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 #drinks img {
   width: 300px;
+}
+
+.footer {
+  position: fixed;
 }
