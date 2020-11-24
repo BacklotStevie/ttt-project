@@ -7,20 +7,28 @@ import { Route, Switch, Link } from 'react-router-dom'
 
 function App() {
 
-  const [menuOpenState, setMenuOpenState] = useState(false)
+  const [menuOpenState, setMenuOpenState] = useState(null)
 
   const hideMenu = () => {
-    setMenuOpenState(!menuOpenState);
-  };
-  console.log(menuOpenState)
+    setMenuOpenState(false);
 
+  };
+
+  const handleStateChange = (state) => {
+    console.log(state)
+    setMenuOpenState(state.menuOpenState)
+  }
+
+  console.log(menuOpenState)
   return (
     <div className="App">
       <nav className="nav-bar">
-        <BurgerMenu right width={250} id="burger-menu">
-          <Link to="/">Home</Link>
-          <Link to="/menu">Menu</Link>
-          <Link to="/contact-us">Contact</Link>
+        <BurgerMenu isOpen={menuOpenState} right width={250} id="burger-menu"
+          onStateChange={(state) => handleStateChange(state)}
+        >
+          <Link onClick={hideMenu} to="/">Home</Link>
+          <Link onClick={hideMenu} to="/menu">Menu</Link>
+          <Link onClick={hideMenu} to="/contact-us">Contact</Link>
         </BurgerMenu>
       </nav>
 

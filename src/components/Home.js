@@ -21,10 +21,10 @@ const Home = () => {
   return (
     <div className="home">
       <section id="headline">
-        <h1>Headline</h1>
+        <h1>Toning with Teremana Tequila</h1>
         <h2>Sub-Header</h2>
         <button className="cta-btn">
-          CALL TO ACTION!
+          RESERVE YOUR SPOT!
         </button><br />
         <audio controls>
           <source src="https://p.scdn.co/mp3-preview/cab6e91217590b37cc254585f3f951c5a5280375?cid=ed8ef298820149d99b3308e2be8e13ba" type="audio/mp3" />
