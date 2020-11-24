@@ -49,7 +49,7 @@ const Home = () => {
             <div id="blanco-details">
               <h2>TEREMANA BLANCO</h2>
               <p>Teremana Tequila Blanco has notes of bright citrus with a smooth, fresh finish.</p>
-              <button>Buy Me!</button>
+              <button>BUY ME!</button>
             </div>
           </div>
         </article>
@@ -58,7 +58,7 @@ const Home = () => {
             <div id="repo-details">
               <h2>TEREMANA REPOSADO</h2>
               <p>Teremana Tequila Reposado has notes of oak and vanilla with a smooth rich finish.</p>
-              <button>No, Buy Me!</button>
+              <button>NO, BUY ME!</button>
             </div>
             <img src="../images/teremana-repo.png" alt="repo" />
           </div>

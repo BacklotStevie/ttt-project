@@ -16,11 +16,9 @@ function App() {
   };
 
   const handleStateChange = (state) => {
-    console.log(state)
     setMenuOpenState(state.menuOpenState)
   }
-
-  console.log(menuOpenState)
+  
   return (
     <div className="App">
       <nav className="nav-bar">
