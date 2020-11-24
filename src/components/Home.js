@@ -1,23 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import Axios from 'axios';
-import Spotify from 'node-spotify-api';
 
 const Home = () => {
-
-  const [song, setSong] = useState([]);
-
-  const spotify = new Spotify({
-    id: 'ed8ef298820149d99b3308e2be8e13ba',
-    secret: '14549ff5603445fc94434aff32e73a24'
-  });
-
-  spotify.search({ type: 'track', query: 'Bodak Yellow' }, function (err, data) {
-    if (err) {
-      return console.log('Error occurred: ' + err);
-    }
-    // console.log(data.tracks.items[0]);
-  });
-
   return (
     <div className="home">
 
@@ -109,10 +92,18 @@ const Home = () => {
             <p>Be a part of the greatest workout ever. Dance to great music. Drink lots of booze. Fantasize about The Rock. What could be better?</p>
           </div>
         </div>
-        <article id="bottom-half"> 
-
-        </article>
       </section>
+
+      <footer>
+        <div class="social">
+          <a href="https://www.instagram.com/teremana/" target="_blank">
+            <img src="../images/insta.png" alt="insta" />
+          </a>
+          <a href="https://twitter.com/teremana" target="_blank">
+            <img src="../images/twitter.png" alt="twitter" />
+          </a>
+        </div>
+      </footer>
     </div>
   );
 };

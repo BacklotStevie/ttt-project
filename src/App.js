@@ -29,6 +29,7 @@ function App() {
           <Link onClick={hideMenu} to="/">Home</Link>
           <Link onClick={hideMenu} to="/drinks">Drinks</Link>
           <Link onClick={hideMenu} to="/contact-us">Contact</Link>
+          <Link onClick={hideMenu} to="/contact-us"><button className="cta-btn">GET IN HERE!</button></Link>
         </BurgerMenu>
       </nav>
 
@@ -37,12 +38,6 @@ function App() {
         <Route exact path="/drinks" render={(props) => <CocktailMenu {...props} />} />
         <Route exact path="/contact-us" render={(props) => <Contact {...props} />} />
       </Switch>
-
-      <nav className="footer">
-        <Link to="/">Home</Link>
-        <Link to="/menu">Menu</Link>
-        <Link to="/contact-us">Contact</Link>
-      </nav>
     </div >
   );
 }
