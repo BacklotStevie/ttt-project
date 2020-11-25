@@ -6,7 +6,7 @@ const Home = () => {
     <div className="home">
 
       <section id="headline">
-        <h1>Toning with Teremana Tequila</h1>
+        <h1>TONING WITH TEREMANA TEQUILA</h1>
         <Link to="/submit">
           <button className="cta-btn">
             RESERVE YOUR SPOT!
@@ -15,11 +15,11 @@ const Home = () => {
       </section>
 
       <section id="rock-pics">
-        <article className="rock-images">
-          <h2>Dwayne Shows His Softer Side in Zumba Name</h2>
+        <article id="zumba-pic" className="rock-images">
+          <h2>Dwayne Shows His Softer Side in Zumba Class</h2>
           <img src="../images/rock-dancing.png" alt="rock dance" />
         </article>
-        <article className="rock-images">
+        <article id="speaking-pic" className="rock-images">
           <h2>Dwayne Promoting His New "Teremana" Tequila</h2>
           <img src="../images/rock-speaking.jpg" alt="rock speaking" />
         </article>
@@ -91,6 +91,7 @@ const Home = () => {
 
       <section id="cta">
         <div id="cta-items">
+          <img src="../images/luau-rock.jpg" />
           <div id="cta-details">
             <h2>ARE YOU READY TO TONE WITH TEREMANA TEQUILA?!</h2>
             <Link to="/submit">

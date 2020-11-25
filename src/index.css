@@ -11,10 +11,6 @@ code {
   font-family: 'Montserrat', sans-serif;
 }
 
-.nav-bar {
-  border: 1px solid #ccc;
-}
-
 nav ul {
   display: flex;
   justify-content: space-evenly;
@@ -82,7 +78,7 @@ h2 {
 }
 
 #blanco-section {
-  background-color: #F25925;
+  background-color: #f1825d;
 }
 
 #blanco-section img {
@@ -93,17 +89,20 @@ h2 {
 #blanco-items {
   display: flex;
   flex-direction: row;
+  justify-content: center;
   align-items: center;
   margin: 0 5%;
 }
 
 #blanco-details {
+  color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 #blanco-details button {
+  color: #f1825d;
   font-size: 1rem;
   border: none;
   border-radius: 20px;
@@ -129,12 +128,14 @@ h2 {
 }
 
 #repo-details {
+  color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 #repo-details button {
+  color: #F4A990;
   font-size: 1rem;
   border: none;
   border-radius: 20px;
@@ -167,8 +168,7 @@ h2 {
 }
 
 #cta-items img {
-  height: 300px;
-  border-radius: 15px;
+  display: none;
 }
 
 #cta-items {
@@ -276,21 +276,25 @@ footer img {
   color: white;
 }
 
-.drink-card {
+.ingredients:last-child span {
+    display: none;
+}
+
+#drink-card {
   /* border: 1px solid red; */
   margin: 25px;
 }
 
-.drink-card img {
+#drink-card img {
   border-radius: 15px;
   width: 80vw;
 }
 
-.drink-card h2 {
+#drink-card h2 {
   color: #171717;
 }
 
-.drink-card button {
+#drink-card button {
   color: white;
   font-size: 1rem;
   padding: 10px;
@@ -319,4 +323,243 @@ footer img {
   margin: 0;
   padding: 19vh 0 25vh 0;
   text-shadow: 4px 4px 2px #F25925;
+}
+
+
+/* //////////////////////////////////////////////////////////////////////////////// */
+/* //////////////////////////////////////////////////////////////////////////////// */
+/* //////////////////////////////////////////////////////////////////////////////// */
+/* DESKTOP ONLY SECTION */
+/* //////////////////////////////////////////////////////////////////////////////// */
+/* //////////////////////////////////////////////////////////////////////////////// */
+/* //////////////////////////////////////////////////////////////////////////////// */
+
+@media only screen and (min-width: 600px) {
+
+  #headline {
+    height: 100vh;
+  }
+
+  #headline h1 {
+    font-size: 4rem;
+    padding: 45vh 2vw 0 2vw;
+  }
+
+  .rock-images {
+    margin: 5vh 0;
+  }
+
+  .rock-images img {
+    width: 40vw;
+  }
+
+  #rock-pics {
+    padding: 0 5vw;
+  }
+
+  #zumba-pic {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #speaking-pic {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #fake-rock-quote {
+    margin-top: 0;
+  } 
+
+  #funny-rock-pic {
+    background-image: url('images/funny-tequila-rock.jpg');
+    background-position: 0% 0%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 85vh;
+  }
+
+  #blanco-section {
+    height: 55vh;
+  }
+
+  #blanco-section img {
+    filter: drop-shadow(10px 10px 10px #3f3f3f);
+    transform: rotate(-10deg);
+    height: 60vh;
+    width: auto;
+    margin: 5vh 7vw 0 7vw;
+  }
+
+  #blanco-items {
+    justify-content: center;
+  }
+
+  #blanco-details {
+    margin: 0 0 15vh 0;
+  }
+
+  #repo-section {
+    height: 70vh;
+  }
+
+  #repo-section img {
+    filter: drop-shadow(10px 10px 10px #3f3f3f);
+    transform: rotate(10deg);
+    height: 60vh;
+    width: auto;
+    margin: 3vh 7vw 0vh 7vw;
+  }
+
+  #repo-items {
+    justify-content: center;
+  }
+
+  #review-items h1 {
+    font-size: 2.5rem;
+  }
+
+  #review-box {
+    flex-direction: unset;
+    align-items: center;
+    height: 30vh;
+  }
+
+  #review-box img {
+    width: 25vmin;
+  }
+
+  #cta-items {
+    height: 100vh;
+    background-color: #f4a990;
+    background-image: unset;
+    justify-content: space-around;
+    padding: 0 5vw;
+  }
+
+  #cta-items img {
+    display: unset;
+    height: 90vh;
+    width: auto;
+    border-radius: 10px;
+    margin: 0 5vw 0 0;
+  }
+
+  #cta-details {
+    color: #171717;
+    text-align: left;
+  }
+
+  #cta-details h2 {
+    font-size: 2.5em;
+  }
+
+  #cta-details p {
+    font-size: 1.2em;
+  }
+
+  footer {
+    background-color: #171717;
+    height: 100px;
+  }
+
+  .social {
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  footer img {
+    width: 50px;
+    height: auto;
+  }
+
+  /* //////////////////////////////////////////////////////////////////////////////// */
+  /* SUBMIT INFO SECTION */
+  /* //////////////////////////////////////////////////////////////////////////////// */
+
+  #submit-header {
+    height: 100vh;
+  }
+
+  #submit-header h1 {
+    font-size: 4rem;
+    padding: 45vh 2vw 0 2vw;
+  }
+
+  #top-separator {
+    height: 30vh;
+    justify-content: center;
+  }
+
+  #top-separator h1 {
+    font-size: 2.5rem;
+  }
+
+  .ingredients:last-child span {
+    display: none;
+  }
+
+  #drinks {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+
+  #drink-card {
+    /* border: 1px solid red; */
+    margin: unset;
+    width: 30vw;
+    padding-top: 5vh;
+  }
+
+  #drink-card img {
+    border-radius: 15px;
+    width: 25vw;
+  }
+
+  #drink-card h2 {
+    height: 8vh;
+    color: #171717;
+  }
+
+  #drink-card div {
+    height: 6vh;
+  }
+
+  #drink-card button {
+    color: white;
+    font-size: 1rem;
+    padding: 10px;
+    border: none;
+    border-radius: 45px;
+    background-color: #F25925;
+    width: 50%;
+  }
+
+  /* //////////////////////////////////////////////////////////////////////////////// */
+  /* DRINKS SECTION */
+  /* //////////////////////////////////////////////////////////////////////////////// */
+
+  #drinks-header {
+    background-image: url('images/rock-tequila.png');
+    background-position: center 0%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 60vh;
+  }
+
+  #drinks-header h1 {
+    font-family: 'Montserrat';
+    color: rgb(255, 255, 255);
+    font-size: 3.5rem;
+    margin: 0;
+    padding: 19vh 0 25vh 0;
+    text-shadow: 4px 4px 2px #F25925;
+  }
+
 }

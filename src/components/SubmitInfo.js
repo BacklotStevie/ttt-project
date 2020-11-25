@@ -33,16 +33,18 @@ const SubmitInfo = () => {
         let ingredientStr = 'strIngredient'
         ingredientStr += i
         if (eachCocktail[ingredientStr] != null) {
-          ingredients.push(<li>{eachCocktail[ingredientStr]}</li>)
+          ingredients.push(<span className="ingredients">{eachCocktail[ingredientStr]}<span>, </span></span>)
         }
       }
 
+      // ingredients.slice(ingredients.length - 2)
+
       console.log(ingredients)
       return (
-        <article className="drink-card">
+        <article id="drink-card">
           <img src={eachCocktail.strDrinkThumb} alt="drink" />
           <h2>{eachCocktail.strDrink}</h2>
-          <p>{ingredients}</p>
+          <div>{ingredients}</div><br /><br />
           <button>SELECT</button>
         </article>
       )

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Home from './components/Home'
-import Contact from './components/Contact'
+import Workouts from './components/Workouts'
 import CocktailMenu from './components/CocktailMenu'
 import SubmitInfo from './components/SubmitInfo'
 import { stack as BurgerMenu } from 'react-burger-menu'
@@ -27,7 +27,7 @@ function App() {
         >
           <Link onClick={hideMenu} to="/">Home</Link>
           <Link onClick={hideMenu} to="/drinks">Drinks</Link>
-          {/* <Link onClick={hideMenu} to="/contact-us">Contact</Link> */}
+          <Link onClick={hideMenu} to="/workouts">Workouts</Link>
           <Link onClick={hideMenu} to="/submit"><button className="cta-btn">GET IN HERE!</button></Link>
         </BurgerMenu>
       </nav>
@@ -35,7 +35,7 @@ function App() {
       <Switch>
         <Route exact path="/" render={(props) => <Home {...props} />} />
         <Route exact path="/drinks" render={(props) => <CocktailMenu {...props} />} />
-        <Route exact path="/contact-us" render={(props) => <Contact {...props} />} />
+        <Route exact path="/workouts" render={(props) => <Workouts {...props} />} />
         <Route exact path="/submit" render={(props) => <SubmitInfo {...props} />} />
       </Switch>
     </div >
