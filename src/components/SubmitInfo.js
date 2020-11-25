@@ -44,7 +44,7 @@ const SubmitInfo = () => {
         <article id="drink-card">
           <img src={eachCocktail.strDrinkThumb} alt="drink" />
           <h2>{eachCocktail.strDrink}</h2>
-          <div>{ingredients}</div><br /><br />
+          <div>{ingredients}</div><br />
           <button>SELECT</button>
         </article>
       )
