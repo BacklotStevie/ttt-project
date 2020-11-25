@@ -5,7 +5,6 @@ import Axios from 'axios';
 const SubmitInfo = () => {
 
   const [cocktails, setCocktails] = useState([]);
-  const [recipes, setRecipes] = useState([]);
 
   useEffect(() => {
 

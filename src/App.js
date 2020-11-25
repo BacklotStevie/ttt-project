@@ -27,7 +27,7 @@ function App() {
         >
           <Link onClick={hideMenu} to="/">Home</Link>
           <Link onClick={hideMenu} to="/drinks">Drinks</Link>
-          <Link onClick={hideMenu} to="/contact-us">Contact</Link>
+          {/* <Link onClick={hideMenu} to="/contact-us">Contact</Link> */}
           <Link onClick={hideMenu} to="/submit"><button className="cta-btn">GET IN HERE!</button></Link>
         </BurgerMenu>
       </nav>

@@ -9,33 +9,50 @@ const CocktailMenu = () => {
 
     Axios
       .get(`https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=Tequila`)
-      .then(res => {
-        console.log(res.data)
-        setCocktails(res.data.drinks)
+      .then(async res => {
+        let cocktailInfo = []
+        for (let drink of res.data.drinks) {
+          let info = await Axios.get(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${drink.strDrink}`)
+          cocktailInfo.push(info.data.drinks[0])
+        }
+        setCocktails(cocktailInfo)
       })
 
   }, [])
 
-  // console.log(cocktails)
+  console.log(cocktails)
 
-  const showCocktailDetails = () => {
-    return cocktails.map(eachCocktail => {
+  const cocktailData = (cocktail) => {
+
+    return cocktails.map((eachCocktail) => {
+      let ingredients = [];
+
+
+      for (let i = 1; i < 15; i++) {
+        let ingredientStr = 'strIngredient'
+        ingredientStr += i
+        if (eachCocktail[ingredientStr] != null) {
+          ingredients.push(<li>{eachCocktail[ingredientStr]}</li>)
+        }
+      }
+
+      console.log(ingredients)
       return (
-        <div id="drinks">
-          <h2>
-            {eachCocktail.strDrink}
-          </h2>
-          <img src={eachCocktail.strDrinkThumb} alt="" />
-        </div>
+        <article className="drink-card">
+          <img src={eachCocktail.strDrinkThumb} alt="drink" />
+          <h2>{eachCocktail.strDrink}</h2>
+          <p>{ingredients}</p>
+        </article>
       )
     })
+
   }
 
   return (
-    <div>
-      <h1>The Rock's Menu!</h1>
+    <div id="drinks-header">
+      <h1>THE ROCK'S MENU!</h1>
 
-      {showCocktailDetails()}
+      {cocktailData()}
     </div>
   );
 };
