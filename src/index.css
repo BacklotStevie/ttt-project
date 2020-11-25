@@ -350,7 +350,7 @@ footer img {
   }
 
   .rock-images img {
-    width: 40vw;
+    width: 66vmin;
   }
 
   #rock-pics {
@@ -379,11 +379,11 @@ footer img {
     background-position: 0% 0%;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 85vh;
+    height: 85vmin;
   }
 
   #blanco-section {
-    height: 55vh;
+    height: 55vmin;
   }
 
   #blanco-section img {
@@ -403,7 +403,7 @@ footer img {
   }
 
   #repo-section {
-    height: 70vh;
+    height: 70vmin;
   }
 
   #repo-section img {
