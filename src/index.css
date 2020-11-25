@@ -202,8 +202,15 @@ footer {
   height: 100px;
 }
 
+.social {
+  height: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
 footer img {
-  width: 12%;
+  width: 50px;
   height: auto;
 }
 

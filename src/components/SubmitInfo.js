@@ -11,23 +11,52 @@ const SubmitInfo = () => {
 
     Axios
       .get(`https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=Tequila`)
-      .then(res => {
-        setCocktails(res.data.drinks)
+      .then(async res => {
+        let cocktailInfo = []
+        for (let drink of res.data.drinks) {
+          let info = await Axios.get(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${drink.strDrink}`)
+          cocktailInfo.push(info.data.drinks[0])
+        }
+        setCocktails(cocktailInfo)
       })
 
   }, [])
 
   console.log(cocktails)
 
-  useEffect(() => {
+  const cocktailData = () => {
 
-    Axios
-      .get(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita`)
-      .then(res => {
-        setCocktails(res.data.drinks)
-      })
+    let cocktailNames = []
+    let cocktailUrls = []
+    let cocktailIngredients = {}
 
-  }, [])
+    cocktails.map((eachCocktail) => {
+      cocktailNames.push(eachCocktail?.strDrink)
+      cocktailUrls.push(eachCocktail?.strUrl)
+
+      let ingredientStr = 'strIngredient'
+
+      for (let i = 1; i < 15; i++) {
+        ingredientStr += i
+        console.log(ingredientStr)
+        if (eachCocktail?.ingredientStr != null) {
+          cocktailIngredients.push(eachCocktail?.ingredientStr)
+        } else {
+          break;
+        }
+      }
+    })
+
+    console.log(cocktailIngredients)
+
+    return (
+      <div class="cocktail">
+        <h2>{cocktails}</h2>
+      </div>
+    )
+  }
+
+  cocktailData()
 
   return (
     <div className="submit">
