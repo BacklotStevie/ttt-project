@@ -308,6 +308,20 @@ footer img {
 /* DRINKS SECTION */
 /* //////////////////////////////////////////////////////////////////////////////// */
 
+.drink-card {
+  /* border: 1px solid red; */
+  margin: 25px;
+}
+
+.drink-card img {
+  border-radius: 15px;
+  width: 80vw;
+}
+
+.drink-card h2 {
+  color: #171717;
+}
+
 #drinks-header {
   background-image: url('images/rock-tequila.png');
   background-position: center 0%;
@@ -325,6 +339,33 @@ footer img {
   text-shadow: 4px 4px 2px #F25925;
 }
 
+/* //////////////////////////////////////////////////////////////////////////////// */
+/* WORKOUTS SECTION */
+/* //////////////////////////////////////////////////////////////////////////////// */
+
+#workouts-header {
+  background-image: url('images/rock-thumbs-up.jpg');
+  background-position: center 0%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 60vh;
+}
+
+#workouts-header h1 {
+  color: rgb(255, 255, 255);
+  font-size: 3.5rem;
+  margin: 0;
+  padding: 19vh 0 25vh 0;
+  text-shadow: 4px 4px 2px #F25925;
+}
+
+#workouts img {
+  width: 100vw;
+}
+
+#workouts h2 {
+  color: #F25925;
+}
 
 /* //////////////////////////////////////////////////////////////////////////////// */
 /* //////////////////////////////////////////////////////////////////////////////// */
@@ -545,12 +586,39 @@ footer img {
   /* DRINKS SECTION */
   /* //////////////////////////////////////////////////////////////////////////////// */
 
+  .drinks {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+
+  .drink-card {
+    /* border: 1px solid red; */
+    margin: unset;
+    width: 30vw;
+    padding-top: 5vh;
+  }
+
+  .drink-card img {
+    border-radius: 15px;
+    width: 25vw;
+  }
+
+  .drink-card h2 {
+    height: 8vh;
+    color: #171717;
+  }
+
+  .drink-card div {
+    height: 6vh;
+  }
+
   #drinks-header {
     background-image: url('images/rock-tequila.png');
     background-position: center 0%;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 60vh;
+    height: 100vh;
   }
 
   #drinks-header h1 {
@@ -558,8 +626,30 @@ footer img {
     color: rgb(255, 255, 255);
     font-size: 3.5rem;
     margin: 0;
-    padding: 19vh 0 25vh 0;
+    padding: 50vh 0 40vh 0;
     text-shadow: 4px 4px 2px #F25925;
+  }
+
+  /* //////////////////////////////////////////////////////////////////////////////// */
+  /* WORKOUTS SECTION */
+  /* //////////////////////////////////////////////////////////////////////////////// */
+
+  #workouts-header {
+    height: 100vh;
+  }
+
+  #workouts-header h1 {
+    padding: 50vh 0 25vh 0;
+    text-shadow: 4px 4px 2px #F25925;
+  }
+
+  #workouts img {
+    width: 80vw;
+    border-radius: 15px;
+  }
+
+  #workouts h2 {
+    color: #F25925;
   }
 
 }

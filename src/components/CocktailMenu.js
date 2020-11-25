@@ -32,7 +32,7 @@ const CocktailMenu = () => {
         let ingredientStr = 'strIngredient'
         ingredientStr += i
         if (eachCocktail[ingredientStr] != null) {
-          ingredients.push(<li>{eachCocktail[ingredientStr]}</li>)
+          ingredients.push(<span className="ingredients">{eachCocktail[ingredientStr]}<span>, </span></span>)
         }
       }
 
@@ -41,7 +41,7 @@ const CocktailMenu = () => {
         <article className="drink-card">
           <img src={eachCocktail.strDrinkThumb} alt="drink" />
           <h2>{eachCocktail.strDrink}</h2>
-          <p>{ingredients}</p>
+          <div>{ingredients}</div><br />
         </article>
       )
     })
@@ -51,8 +51,10 @@ const CocktailMenu = () => {
   return (
     <div id="drinks-header">
       <h1>THE ROCK'S MENU!</h1>
-
-      {cocktailData()}
+      <div className="drinks">
+  
+        {cocktailData()}
+      </div>
     </div>
   );
 };
