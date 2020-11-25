@@ -16,7 +16,7 @@ const Home = () => {
 
       <section id="rock-pics">
         <article className="rock-images">
-          <h2>Dwayne Shows His Softer Side in Zumba Class</h2>
+          <h2>Dwayne Shows His Softer Side in Zumba Name</h2>
           <img src="../images/rock-dancing.png" alt="rock dance" />
         </article>
         <article className="rock-images">
@@ -27,7 +27,7 @@ const Home = () => {
 
       <section id="fake-rock-quote">
         <p>
-          Have you ever been in the middle of your <b>Zumba</b> class and thought to yourself, "Man, I could use a shot. Also, The Rock was great in that movie I watched last night!"?<br /><br />
+          Have you ever been in the middle of your <b>Zumba</b> Name and thought to yourself, "Man, I could use a shot. Also, The Rock was great in that movie I watched last night!"?<br /><br />
           Well, <i>you're not alone!</i><br /><br />
           For a <b>limited time only,</b> The Rock is inviting <i>you</i> into his home for a Zumba session followed by a cold beverage made with his very own Teremana Tequila.<br /><br />
           <h3>GET YOUR SPOT NOW!</h3>
@@ -104,7 +104,7 @@ const Home = () => {
       </section>
 
       <footer>
-        <div class="social">
+        <div className="social">
           <a href="https://www.instagram.com/teremana/" target="_blank">
             <img src="../images/insta.png" alt="insta" />
           </a>

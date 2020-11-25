@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import Axios from 'axios';
 
 const SubmitInfo = () => {
@@ -24,39 +24,34 @@ const SubmitInfo = () => {
 
   console.log(cocktails)
 
-  const cocktailData = () => {
+  const cocktailData = (cocktail) => {
 
-    let cocktailNames = []
-    let cocktailUrls = []
-    let cocktailIngredients = {}
+    return cocktails.map((eachCocktail) => {
+      let ingredients = [];
 
-    cocktails.map((eachCocktail) => {
-      cocktailNames.push(eachCocktail?.strDrink)
-      cocktailUrls.push(eachCocktail?.strUrl)
-
-      let ingredientStr = 'strIngredient'
 
       for (let i = 1; i < 15; i++) {
+        let ingredientStr = 'strIngredient'
         ingredientStr += i
-        console.log(ingredientStr)
-        if (eachCocktail?.ingredientStr != null) {
-          cocktailIngredients.push(eachCocktail?.ingredientStr)
-        } else {
-          break;
+        if (eachCocktail[ingredientStr] != null) {
+          ingredients.push(<li>{eachCocktail[ingredientStr]}</li>)
         }
       }
+
+      console.log(ingredients)
+      return (
+        <article className="drink-card">
+          <img src={eachCocktail.strDrinkThumb} alt="drink" />
+          <h2>{eachCocktail.strDrink}</h2>
+          <p>{ingredients}</p>
+          <button>SELECT</button>
+        </article>
+      )
     })
 
-    console.log(cocktailIngredients)
-
-    return (
-      <div class="cocktail">
-        <h2>{cocktails}</h2>
-      </div>
-    )
   }
 
-  cocktailData()
+
 
   return (
     <div className="submit">
@@ -89,42 +84,17 @@ const SubmitInfo = () => {
 
       <section id="choose-cocktail">
         <h2>PICK YOUR POISON</h2>
-        <hr id="separator" />
-
-        <div id="drinks" class="drinks-container">
-          <h1>Choose Cocktail</h1>
-          <div class="drinks-card">
-            <div class="drinks-1">
-              <h2>Margarita</h2>
-              <img src="placeholder.png" alt="Drink-1"
-                class="drink-image" />
-              <p>Tequila, Raspberry, Lemon, Simple Syrup, Mint</p>
-            </div>
-            <div class="drink-2">
-              <h2>Brave Bull</h2>
-              <img src="placeholder.png" alt="Drink-2"
-                class="drink-image" />
-              <p>Tequila, Raspberry, Lemon, Simple Syrup, Mint</p>
-            </div>
-            <div class="drink-3">
-              <h2>Paloma</h2>
-              <img src="placeholder.png" alt="Drink-3"
-                class="drink-image" />
-              <p>Tequila, Raspberry, Lemon, Simple Syrup, Mint</p>
-            </div>
-            <div class="drink-4">
-              <h2>Tequila Sunrise</h2>
-              <img src="placeholder.png" alt="Drink-4"
-                class="drink-image" />
-              <p>Tequila, Raspberry, Lemon, Simple Syrup, Mint</p>
-            </div>
-          </div>
+        <div id="top-separator">
+          <h1>EACH MADE WITH AUTHENTIC TEREMANA TEQUILA!</h1>
+        </div>
+        <div id="drinks" className="drinks-container">
+          {cocktailData()}
         </div>
 
 
         <div className="form-button">
           <button>
-            Submit
+            SUBMIT
           </button>
         </div>
       </section>

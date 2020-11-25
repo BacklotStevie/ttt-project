@@ -249,7 +249,7 @@ footer img {
   border-radius: 5px;
   padding: 10px;
   margin: 10px;
-  background-color: #F4A990;
+  background-color: #f3c5b5;
 }
 
 .form-button button {
@@ -263,8 +263,39 @@ footer img {
   width: 40%;
 }
 
-#separator {
-  background-color: #F4A990;
+#top-separator {
+  background-color: #f1825d;
   border: none;
   height: 15vh;
+  display: flex;
+  align-items: center;
+}
+
+#top-separator h1 {
+  font-size: 1.7rem;
+  color: white;
+}
+
+.drink-card {
+  /* border: 1px solid red; */
+  margin: 25px;
+}
+
+.drink-card img {
+  border-radius: 15px;
+  width: 20vw;
+}
+
+.drink-card h2 {
+  color: #171717;
+}
+
+.drink-card button {
+  color: white;
+  font-size: 1rem;
+  padding: 10px;
+  border: none;
+  border-radius: 45px;
+  background-color: #F25925;
+  width: 50%;
 }
